@@ -1,0 +1,418 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [9.17.6] - 2026-10-15
+### Details
+#### Chore
+- Update dependency tadija/aexml to from: "4.7.3" by @renovate[bot] in [#1194](https://github.com/tuist/XcodeProj/pull/1194)
+- Update dependency tadija/aexml to from: "4.7.2" by @renovate[bot] in [#1192](https://github.com/tuist/XcodeProj/pull/1192)
+
+## [9.17.5] - 2026-09-18
+### Details
+#### Bug Fixes
+- Resolve the references project.xcproj left undefined by @pepicrft in [#1184](https://github.com/tuist/XcodeProj/pull/1184)
+
+## [9.17.4] - 2026-09-18
+### Details
+#### Bug Fixes
+- Identify nameless copy files and script phases in project.xcproj by @antigluten in [#1181](https://github.com/tuist/XcodeProj/pull/1181)
+
+## [9.17.3] - 2026-09-18
+### Details
+#### Bug Fixes
+- Settle object identifiers when encoding project.xcproj by @antigluten in [#1180](https://github.com/tuist/XcodeProj/pull/1180)
+
+## [9.17.2] - 2026-09-18
+### Details
+#### Bug Fixes
+- Reference file elements by the name project.xcproj writes by @antigluten in [#1182](https://github.com/tuist/XcodeProj/pull/1182)
+- Resolve base-localized resource paths in JSON projects by @ileitch in [#1179](https://github.com/tuist/XcodeProj/pull/1179)
+
+## New Contributors
+* @antigluten made their first contribution in [#1182](https://github.com/tuist/XcodeProj/pull/1182)
+## [9.17.1] - 2026-09-17
+### Details
+#### Bug Fixes
+- Preserve JSON build setting configuration overrides by @ileitch in [#1178](https://github.com/tuist/XcodeProj/pull/1178)
+
+## [9.17.0] - 2026-09-17
+### Details
+#### Features
+- [Experimental] support Xcode 27.2's JSON project format (project.xcproj) by @freddi-kit in [#1177](https://github.com/tuist/XcodeProj/pull/1177)
+
+## [9.16.1] - 2026-09-17
+### Details
+#### Bug Fixes
+- Support the Swift Static Linux SDK (musl) by @sabafshin in [#1168](https://github.com/tuist/XcodeProj/pull/1168)
+
+## New Contributors
+* @sabafshin made their first contribution in [#1168](https://github.com/tuist/XcodeProj/pull/1168)
+## [9.16.0] - 2026-08-20
+### Details
+#### Features
+- Add host build tool product type by @pepicrft in [#1171](https://github.com/tuist/XcodeProj/pull/1171)
+
+## [9.15.1] - 2026-08-11
+### Details
+#### Bug Fixes
+- Recognize Icon Composer .icon file type by @jsj in [#1162](https://github.com/tuist/XcodeProj/pull/1162)
+
+## New Contributors
+* @jsj made their first contribution in [#1162](https://github.com/tuist/XcodeProj/pull/1162)
+## [9.15.0] - 2026-07-28
+### Details
+#### Features
+- Support for FileSystemSynchronizedGroup parsing by @iorecicSA in [#1147](https://github.com/tuist/XcodeProj/pull/1147)
+
+## New Contributors
+* @iorecicSA made their first contribution in [#1147](https://github.com/tuist/XcodeProj/pull/1147)
+## [9.14.0] - 2026-07-13
+### Details
+#### Features
+- Add `traits` to `XCRemoteSwiftPackageReference` and `XCLocalSwiftPackageReference` by @chigichan24 in [#1114](https://github.com/tuist/XcodeProj/pull/1114)
+
+## New Contributors
+* @chigichan24 made their first contribution in [#1114](https://github.com/tuist/XcodeProj/pull/1114)
+## [9.13.0] - 2026-06-05
+### Details
+#### Features
+- Compatibility with the iOS platform by @nmcc24 in [#1016](https://github.com/tuist/XcodeProj/pull/1016)
+
+## New Contributors
+* @nmcc24 made their first contribution in [#1016](https://github.com/tuist/XcodeProj/pull/1016)
+## [9.12.0] - 2026-05-05
+### Details
+#### Features
+- Support new Xcode 16 XCBuildConfiguration format by @johnrbent in [#1037](https://github.com/tuist/XcodeProj/pull/1037)
+
+## New Contributors
+* @johnrbent made their first contribution in [#1037](https://github.com/tuist/XcodeProj/pull/1037)
+## [9.11.0] - 2026-04-12
+### Details
+#### Features
+- Add optional debugAsWhichUser to XCScheme.LaunchAction by @macblazer in [#1100](https://github.com/tuist/XcodeProj/pull/1100)
+
+## New Contributors
+* @macblazer made their first contribution in [#1100](https://github.com/tuist/XcodeProj/pull/1100)
+## [9.10.1] - 2026-02-26
+### Details
+#### Performance
+- Optimized validString in CommentedString by @ChrisBenua in [#1067](https://github.com/tuist/XcodeProj/pull/1067)
+
+## New Contributors
+* @ChrisBenua made their first contribution in [#1067](https://github.com/tuist/XcodeProj/pull/1067)
+## [9.10.0] - 2026-02-26
+### Details
+#### Features
+- Added support for Xcode 26's `dstSubfolder` by @myaumura in [#1038](https://github.com/tuist/XcodeProj/pull/1038)
+
+## New Contributors
+* @myaumura made their first contribution in [#1038](https://github.com/tuist/XcodeProj/pull/1038)
+## [9.9.0] - 2026-02-24
+### Details
+#### Features
+- Add delete support for XCLocalSwiftPackageReference by @Kosikowski in [#1044](https://github.com/tuist/XcodeProj/pull/1044)
+
+## New Contributors
+* @Kosikowski made their first contribution in [#1044](https://github.com/tuist/XcodeProj/pull/1044)
+## [9.8.0] - 2026-02-20
+### Details
+#### Features
+- Add platformFiltersByRelativePath to PBXFileSystemSynchronizedBuildFileExceptionSet by @fortmarek in [#1065](https://github.com/tuist/XcodeProj/pull/1065)
+
+## [9.7.2] - 2025-12-30
+### Details
+#### Documentation
+- Add michaelversus as a contributor for code by @allcontributors[bot] in [#1036](https://github.com/tuist/XcodeProj/pull/1036)
+
+## [9.7.1] - 2025-12-26
+### Details
+#### Bug Fixes
+- Support for shellScript in the Xcode 16 format by @michaelversus in [#1018](https://github.com/tuist/XcodeProj/pull/1018)
+
+## New Contributors
+* @michaelversus made their first contribution in [#1018](https://github.com/tuist/XcodeProj/pull/1018)
+## [9.7.0] - 2025-12-19
+### Details
+#### Features
+- Handle references for exception sets in Synchronized Groups by @mirkokg in [#1014](https://github.com/tuist/XcodeProj/pull/1014)
+
+## New Contributors
+* @mirkokg made their first contribution in [#1014](https://github.com/tuist/XcodeProj/pull/1014)
+* @wojciech-kulik made their first contribution in [#1009](https://github.com/tuist/XcodeProj/pull/1009)
+## [9.6.0] - 2025-10-06
+### Details
+#### Features
+- Speed up object parsing by @karlpuusepp in [#980](https://github.com/tuist/XcodeProj/pull/980)
+
+## New Contributors
+* @karlpuusepp made their first contribution in [#980](https://github.com/tuist/XcodeProj/pull/980)
+## [9.5.0] - 2025-08-08
+### Details
+#### Features
+- Possibility to get child group using path by @ToMark1881 in [#959](https://github.com/tuist/XcodeProj/pull/959)
+
+## New Contributors
+* @ToMark1881 made their first contribution in [#959](https://github.com/tuist/XcodeProj/pull/959)
+## [9.4.3] - 2025-06-25
+### Details
+#### Bug Fixes
+- SWIFT_OPTIMIZATION_LEVEL -O not -Owholemodule by @stefanfessler in [#954](https://github.com/tuist/XcodeProj/pull/954)
+
+## New Contributors
+* @stefanfessler made their first contribution in [#954](https://github.com/tuist/XcodeProj/pull/954)
+## [9.4.2] - 2025-05-20
+### Details
+#### Bug Fixes
+- Align the sorting of project references with Xcode 16 by @mikhailmulyar in [#937](https://github.com/tuist/XcodeProj/pull/937)
+
+## New Contributors
+* @mikhailmulyar made their first contribution in [#937](https://github.com/tuist/XcodeProj/pull/937)
+## [9.4.1] - 2025-05-19
+### Details
+#### Documentation
+- Add mikhailmulyar as a contributor for code by @allcontributors[bot] in [#938](https://github.com/tuist/XcodeProj/pull/938)
+
+#### Refactor
+- Make XCScheme static path functions public by @trentguillory-gc in [#940](https://github.com/tuist/XcodeProj/pull/940)
+
+## New Contributors
+* @trentguillory-gc made their first contribution in [#940](https://github.com/tuist/XcodeProj/pull/940)
+## [9.4.0] - 2025-05-15
+### Details
+#### Features
+- Add .apinotes support by @rw-garmin in [#931](https://github.com/tuist/XcodeProj/pull/931)
+
+## New Contributors
+* @rw-garmin made their first contribution in [#931](https://github.com/tuist/XcodeProj/pull/931)
+## [9.3.0] - 2025-04-30
+### Details
+#### Features
+- Add expectedSignature property by @TamarMilchtaich in [#913](https://github.com/tuist/XcodeProj/pull/913)
+
+## New Contributors
+* @TamarMilchtaich made their first contribution in [#913](https://github.com/tuist/XcodeProj/pull/913)
+## [9.2.0] - 2025-04-29
+### Details
+#### Features
+- Add fileSystemSynchronized properties to public helpers by @Econa77 in [#928](https://github.com/tuist/XcodeProj/pull/928)
+
+## New Contributors
+* @Econa77 made their first contribution in [#928](https://github.com/tuist/XcodeProj/pull/928)
+## [9.1.0] - 2025-04-28
+### Details
+#### Features
+- Implement support for the App Clip's URL by @ns-vasilev in [#927](https://github.com/tuist/XcodeProj/pull/927)
+
+## New Contributors
+* @ns-vasilev made their first contribution in [#927](https://github.com/tuist/XcodeProj/pull/927)
+## [9.0.2] - 2025-04-07
+### Details
+#### Bug Fixes
+- Allow empty `PBXProject.TargetAttributes` by @MouadBenjrinija in [#924](https://github.com/tuist/XcodeProj/pull/924)
+
+## New Contributors
+* @MouadBenjrinija made their first contribution in [#924](https://github.com/tuist/XcodeProj/pull/924)
+## [9.0.1] - 2025-04-07
+### Details
+#### Bug Fixes
+- Add missing global accent color name build setting for apps by @damien-rivet in [#920](https://github.com/tuist/XcodeProj/pull/920)
+
+#### Documentation
+- Add bryansum as a contributor for code by @allcontributors[bot] in [#899](https://github.com/tuist/XcodeProj/pull/899)
+
+## New Contributors
+* @damien-rivet made their first contribution in [#920](https://github.com/tuist/XcodeProj/pull/920)
+## [9.0.0] - 2025-03-17
+### Details
+#### Refactor
+- Strongly typed values in `BuildSettings` and `BuildFileSettings` by @waltflanagan in [#903](https://github.com/tuist/XcodeProj/pull/903)
+
+## [8.27.7] - 2025-03-14
+### Details
+#### Chore
+- Update dependency tadija/aexml to from: "4.7.0" by @renovate[bot] in [#912](https://github.com/tuist/XcodeProj/pull/912)
+
+## [8.27.6] - 2025-03-14
+### Details
+#### Miscellaneous Tasks
+- Update changelog and renovate configuration by @pepicrft in [#911](https://github.com/tuist/XcodeProj/pull/911)
+
+## [8.27.0] - 2025-02-18
+### Details
+#### Features
+- Support `PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet` by @adincebic in [#894](https://github.com/tuist/XcodeProj/pull/894)
+
+## New Contributors
+* @adincebic made their first contribution in [#894](https://github.com/tuist/XcodeProj/pull/894)
+## [8.26.8] - 2025-02-18
+### Details
+#### Refactor
+- Strongly type plist values to achieve full sendability by @waltflanagan in [#904](https://github.com/tuist/XcodeProj/pull/904)
+
+## [8.26.5] - 2025-01-27
+### Details
+#### Bug Fixes
+- Ensure that file references are fixed for filesystem synchronized root groups by @bryansum in [#897](https://github.com/tuist/XcodeProj/pull/897)
+
+## New Contributors
+* @bryansum made their first contribution in [#897](https://github.com/tuist/XcodeProj/pull/897)
+## [8.26.4] - 2025-01-24
+### Details
+#### Bug Fixes
+- Add missing BuildSettingsProvider for visionOS by @alexanderwe in [#898](https://github.com/tuist/XcodeProj/pull/898)
+
+## New Contributors
+* @alexanderwe made their first contribution in [#898](https://github.com/tuist/XcodeProj/pull/898)
+## [8.26.0] - 2024-12-21
+### Details
+#### Features
+- Add path to XcodeProj and XCWorkspace by @ajkolean in [#892](https://github.com/tuist/XcodeProj/pull/892)
+
+## New Contributors
+* @ajkolean made their first contribution in [#892](https://github.com/tuist/XcodeProj/pull/892)
+## [8.25.1] - 2024-12-19
+### Details
+#### Bug Fixes
+- Infinite recursion and Incorrect deprecation notice in PathRunnable by @georgenavarro in [#889](https://github.com/tuist/XcodeProj/pull/889)
+
+## [8.25.0] - 2024-12-03
+### Details
+#### Features
+- Add handling for Swift Testing Only Parallelization by @kelvinharron in [#871](https://github.com/tuist/XcodeProj/pull/871)
+
+## New Contributors
+* @kelvinharron made their first contribution in [#871](https://github.com/tuist/XcodeProj/pull/871)
+## [8.24.13] - 2024-12-03
+### Details
+#### Documentation
+- Add Speakus as a contributor for code by @allcontributors[bot] in [#887](https://github.com/tuist/XcodeProj/pull/887)
+
+#### Refactor
+- Update PathRunnable so that it subclasses Runnable by @georgenavarro in [#883](https://github.com/tuist/XcodeProj/pull/883)
+
+## New Contributors
+* @georgenavarro made their first contribution in [#883](https://github.com/tuist/XcodeProj/pull/883)
+## [8.24.12] - 2024-12-03
+### Details
+#### Bug Fixes
+- Inconsistent behaviour with Xcode 16 when `PBXProject.TargetAttributes` is empty by @Speakus in [#865](https://github.com/tuist/XcodeProj/pull/865)
+
+#### Documentation
+- Add kelvinharron as a contributor for code by @allcontributors[bot] in [#886](https://github.com/tuist/XcodeProj/pull/886)
+- Add georgenavarro as a contributor for code by @allcontributors[bot] in [#885](https://github.com/tuist/XcodeProj/pull/885)
+
+## New Contributors
+* @Speakus made their first contribution in [#865](https://github.com/tuist/XcodeProj/pull/865)
+## [8.24.10] - 2024-11-20
+### Details
+#### Refactor
+- Align ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES with the Xcode default by @yungu0010 in [#881](https://github.com/tuist/XcodeProj/pull/881)
+
+## New Contributors
+* @yungu0010 made their first contribution in [#881](https://github.com/tuist/XcodeProj/pull/881)
+## [8.24.2] - 2024-10-10
+### Details
+#### Bug Fixes
+- Issues parsing Xcode 16 projects by @pepicrft in [#862](https://github.com/tuist/XcodeProj/pull/862)
+
+## [8.24.1] - 2024-09-27
+### Details
+#### Bug Fixes
+- Repository cleanup by @pepicrft in [#859](https://github.com/tuist/XcodeProj/pull/859)
+
+## [8.24.0] - 2024-09-27
+### Details
+#### Features
+- Make `PBXProject.compatibilityVersion` optional and add `PBXProject.preferredProjectObjectVersion` to support Xcode 16 by @kimdv in [#854](https://github.com/tuist/XcodeProj/pull/854)
+
+## [8.23.9] - 2024-09-27
+### Details
+#### Bug Fixes
+- Order for `XCLocalSwiftPackageReference` and `XCRemoteSwiftPackageReference` by @kimdv in [#855](https://github.com/tuist/XcodeProj/pull/855)
+
+## New Contributors
+* @kimdv made their first contribution in [#855](https://github.com/tuist/XcodeProj/pull/855)
+## [8.23.8] - 2024-09-26
+### Details
+#### Bug Fixes
+- Error: ambiguous use of 'arc4random_uniform' on Linux distros by @Howler4695 in [#846](https://github.com/tuist/XcodeProj/pull/846)
+
+## New Contributors
+* @Howler4695 made their first contribution in [#846](https://github.com/tuist/XcodeProj/pull/846)
+## [8.23.0] - 2024-08-11
+### Details
+#### Documentation
+- Add filipracki as a contributor for code by @allcontributors[bot] in [#832](https://github.com/tuist/XcodeProj/pull/832)
+
+#### Features
+- Introduce the new Xcode 16 models `PBXFileSystemSynchronizedRootGroup` and `PBXFileSystemSynchronizedBuildFileExceptionSet` by @pepicrft in [#827](https://github.com/tuist/XcodeProj/pull/827)
+
+#### Miscellaneous Tasks
+- Continuously release releasable changes by @pepicrft in [#842](https://github.com/tuist/XcodeProj/pull/842)
+- Disable the renovatebot dashboard by @pepicrft in [#840](https://github.com/tuist/XcodeProj/pull/840)
+- Set up SwiftLint and SwiftFormat, run them against the project, and run them as part of the CI workflows by @pepicrft in [#836](https://github.com/tuist/XcodeProj/pull/836)
+
+## New Contributors
+* @filipracki made their first contribution in [#834](https://github.com/tuist/XcodeProj/pull/834)
+[9.17.6]: https://github.com/tuist/XcodeProj/compare/9.17.5..9.17.6
+[9.17.5]: https://github.com/tuist/XcodeProj/compare/9.17.4..9.17.5
+[9.17.4]: https://github.com/tuist/XcodeProj/compare/9.17.3..9.17.4
+[9.17.3]: https://github.com/tuist/XcodeProj/compare/9.17.2..9.17.3
+[9.17.2]: https://github.com/tuist/XcodeProj/compare/9.17.1..9.17.2
+[9.17.1]: https://github.com/tuist/XcodeProj/compare/9.17.0..9.17.1
+[9.17.0]: https://github.com/tuist/XcodeProj/compare/9.16.1..9.17.0
+[9.16.1]: https://github.com/tuist/XcodeProj/compare/9.16.0..9.16.1
+[9.16.0]: https://github.com/tuist/XcodeProj/compare/9.15.1..9.16.0
+[9.15.1]: https://github.com/tuist/XcodeProj/compare/9.15.0..9.15.1
+[9.15.0]: https://github.com/tuist/XcodeProj/compare/9.14.0..9.15.0
+[9.14.0]: https://github.com/tuist/XcodeProj/compare/9.13.0..9.14.0
+[9.13.0]: https://github.com/tuist/XcodeProj/compare/9.12.0..9.13.0
+[9.12.0]: https://github.com/tuist/XcodeProj/compare/9.11.0..9.12.0
+[9.11.0]: https://github.com/tuist/XcodeProj/compare/9.10.1..9.11.0
+[9.10.1]: https://github.com/tuist/XcodeProj/compare/9.10.0..9.10.1
+[9.10.0]: https://github.com/tuist/XcodeProj/compare/9.9.0..9.10.0
+[9.9.0]: https://github.com/tuist/XcodeProj/compare/9.8.0..9.9.0
+[9.8.0]: https://github.com/tuist/XcodeProj/compare/9.7.2..9.8.0
+[9.7.2]: https://github.com/tuist/XcodeProj/compare/9.7.1..9.7.2
+[9.7.1]: https://github.com/tuist/XcodeProj/compare/9.7.0..9.7.1
+[9.7.0]: https://github.com/tuist/XcodeProj/compare/9.6.0..9.7.0
+[9.6.0]: https://github.com/tuist/XcodeProj/compare/9.5.0..9.6.0
+[9.5.0]: https://github.com/tuist/XcodeProj/compare/9.4.3..9.5.0
+[9.4.3]: https://github.com/tuist/XcodeProj/compare/9.4.2..9.4.3
+[9.4.2]: https://github.com/tuist/XcodeProj/compare/9.4.1..9.4.2
+[9.4.1]: https://github.com/tuist/XcodeProj/compare/9.4.0..9.4.1
+[9.4.0]: https://github.com/tuist/XcodeProj/compare/9.3.0..9.4.0
+[9.3.0]: https://github.com/tuist/XcodeProj/compare/9.2.0..9.3.0
+[9.2.0]: https://github.com/tuist/XcodeProj/compare/9.1.0..9.2.0
+[9.1.0]: https://github.com/tuist/XcodeProj/compare/9.0.2..9.1.0
+[9.0.2]: https://github.com/tuist/XcodeProj/compare/9.0.1..9.0.2
+[9.0.1]: https://github.com/tuist/XcodeProj/compare/9.0.0..9.0.1
+[9.0.0]: https://github.com/tuist/XcodeProj/compare/8.27.7..9.0.0
+[8.27.7]: https://github.com/tuist/XcodeProj/compare/8.27.6..8.27.7
+[8.27.6]: https://github.com/tuist/XcodeProj/compare/8.27.5..8.27.6
+[8.27.0]: https://github.com/tuist/XcodeProj/compare/8.26.8..8.27.0
+[8.26.8]: https://github.com/tuist/XcodeProj/compare/8.26.7..8.26.8
+[8.26.5]: https://github.com/tuist/XcodeProj/compare/8.26.4..8.26.5
+[8.26.4]: https://github.com/tuist/XcodeProj/compare/8.26.3..8.26.4
+[8.26.0]: https://github.com/tuist/XcodeProj/compare/8.25.1..8.26.0
+[8.25.1]: https://github.com/tuist/XcodeProj/compare/8.25.0..8.25.1
+[8.25.0]: https://github.com/tuist/XcodeProj/compare/8.24.13..8.25.0
+[8.24.13]: https://github.com/tuist/XcodeProj/compare/8.24.12..8.24.13
+[8.24.12]: https://github.com/tuist/XcodeProj/compare/8.24.11..8.24.12
+[8.24.10]: https://github.com/tuist/XcodeProj/compare/8.24.9..8.24.10
+[8.24.2]: https://github.com/tuist/XcodeProj/compare/8.24.1..8.24.2
+[8.24.1]: https://github.com/tuist/XcodeProj/compare/8.24.0..8.24.1
+[8.24.0]: https://github.com/tuist/XcodeProj/compare/8.23.11..8.24.0
+[8.23.9]: https://github.com/tuist/XcodeProj/compare/8.23.8..8.23.9
+[8.23.8]: https://github.com/tuist/XcodeProj/compare/8.23.7..8.23.8
+[8.23.0]: https://github.com/tuist/XcodeProj/compare/8.22.0..8.23.0
+
+
+Check out [GitHub releases](https://github.com/tuist/XcodeProj/releases) for older releases.
+
+<!-- generated by git-cliff -->

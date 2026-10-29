@@ -1,0 +1,80 @@
+import Foundation
+import PathKit
+@testable import XcodeProj
+
+func fixturesPath() -> Path {
+    Path(#filePath).parent().parent().parent().parent() + "Fixtures"
+}
+
+func synchronizedRootGroupsFixture() throws -> Data {
+    let synchronizedRootGroups = fixturesPath() + "SynchronizedRootGroups/SynchronizedRootGroups.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: synchronizedRootGroups.url)
+}
+
+func iosProjectData() throws -> Data {
+    let iosProject = fixturesPath() + "iOS/Project.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: iosProject.url)
+}
+
+func iosProjectWithExtensionsData() throws -> Data {
+    let iosProjectWithExtensions = fixturesPath() + "iOS/AppWithExtensions/AppWithExtensions.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: iosProjectWithExtensions.url)
+}
+
+func fileSharedAcrossTargetsData() throws -> Data {
+    let fileSharedAcrossTargetsProject = fixturesPath() + "FileSharedAcrossTargets/FileSharedAcrossTargets.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: fileSharedAcrossTargetsProject.url)
+}
+
+func targetWithCustomBuildRulesData() throws -> Data {
+    let targetWithCustomBuildRulesProject = fixturesPath() + "TargetWithCustomBuildRules/TargetWithCustomBuildRules.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: targetWithCustomBuildRulesProject.url)
+}
+
+func iosProjectWithXCLocalSwiftPackageReference() throws -> Data {
+    let iosProjectWithXCLocalSwiftPackageReference = fixturesPath() + "iOS/ProjectWithXCLocalSwiftPackageReference.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: iosProjectWithXCLocalSwiftPackageReference.url)
+}
+
+func iosProjectWithRelativeXCLocalSwiftPackageReferences() throws -> Data {
+    let iosProjectWithXCLocalSwiftPackageReference = fixturesPath() + "iOS/ProjectWithRelativeXCLocalSwiftPackageReference/ProjectWithRelativeXCLocalSwiftPackageReference.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: iosProjectWithXCLocalSwiftPackageReference.url)
+}
+
+func iosProjectWithXCLocalSwiftPackageReferences() throws -> Data {
+    let iosProjectWithXCLocalSwiftPackageReference = fixturesPath() + "iOS/ProjectWithXCLocalSwiftPackageReferences.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: iosProjectWithXCLocalSwiftPackageReference.url)
+}
+
+func projectWithWrongProjectReferencesOrder() throws -> Data {
+    let iosProjectWithProjectReferences = fixturesPath() + "Xcode16ProjectReferenceOrder/Wrong.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: iosProjectWithProjectReferences.url)
+}
+
+func projectWithCustomShellScript() throws -> Data {
+    let iosProjectWithShellScript = fixturesPath() + "Xcode16ProjectReferenceOrder/Test.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: iosProjectWithShellScript.url)
+}
+
+func projectWithConfigurationFilesInSynchronizedGroup() throws -> Data {
+    let projectWithConfigurationFilesInSynchronizedGroup = fixturesPath() + "Xcode16BuildConfigurations/Xcode16BuildConfigurations.xcodeproj/project.pbxproj"
+    return try Data(contentsOf: projectWithConfigurationFilesInSynchronizedGroup.url)
+}
+
+// MARK: - project.xcproj fixtures
+
+var everythingProjectPath: Path {
+    fixturesPath() + "XCProj/Everything.xcodeproj"
+}
+
+var everythingXCProjPath: Path {
+    everythingProjectPath + "project.xcproj"
+}
+
+var xcodeGeneratedProjectPath: Path {
+    fixturesPath() + "XCProj/XcodeGenerated.xcodeproj"
+}
+
+var xcodeGeneratedXCProjPath: Path {
+    xcodeGeneratedProjectPath + "project.xcproj"
+}

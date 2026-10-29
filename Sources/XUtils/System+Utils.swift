@@ -1,4 +1,7 @@
 import Foundation
+#if os(Windows)
+import WinSDK
+#endif
 
 #if canImport(System)
 import System
@@ -38,6 +41,10 @@ extension FileDescriptor {
                 guard count > 0 else { throw Errno.ioError }
                 offset += count
             } catch let error as Errno where error == .resourceTemporarilyUnavailable || error == .wouldBlock {
+                #if os(Windows)
+                // CRT file descriptors are never nonblocking
+                throw error
+                #else
                 var descriptor = pollfd(fd: rawValue, events: Int16(POLLOUT), revents: 0)
                 while true {
                     try Task.checkCancellation()
@@ -51,6 +58,7 @@ extension FileDescriptor {
                     }
                 }
                 // Retry write to report terminal errors (including POLLERR/POLLNVAL).
+                #endif
             }
         }
     }
@@ -59,15 +67,31 @@ extension FileDescriptor {
         case shared
         case exclusive
 
+        #if !os(Windows)
         fileprivate var raw: CInt {
             switch self {
             case .shared: LOCK_SH
             case .exclusive: LOCK_EX
             }
         }
+        #endif
     }
 
     public func tryLock(mode: LockMode) throws -> Bool {
+        #if os(Windows)
+        let handle = HANDLE(bitPattern: _get_osfhandle(rawValue))
+        guard let handle, handle != INVALID_HANDLE_VALUE else { throw Errno.badFileDescriptor }
+        var flags = DWORD(LOCKFILE_FAIL_IMMEDIATELY)
+        if mode == .exclusive { flags |= DWORD(LOCKFILE_EXCLUSIVE_LOCK) }
+        var overlapped = OVERLAPPED()
+        if LockFileEx(handle, flags, 0, DWORD.max, DWORD.max, &overlapped) {
+            return true
+        }
+        if GetLastError() == DWORD(ERROR_LOCK_VIOLATION) {
+            return false
+        }
+        throw Errno.ioError
+        #else
         if flock(rawValue, mode.raw | LOCK_NB) == 0 {
             return true
         }
@@ -76,5 +100,6 @@ extension FileDescriptor {
             return false
         }
         throw Errno(rawValue: err)
+        #endif
     }
 }

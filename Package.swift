@@ -50,9 +50,13 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/xtool-org/xtool-core", .upToNextMinor(from: "1.5.1")),
+        // Windows-patched copies of upstream packages (see Vendor/README.md). Local root dependencies
+        // also override transitive dependencies with the same identity.
+        .package(path: "Vendor/xtool-core"),
         .package(url: "https://github.com/xtool-org/SwiftyMobileDevice", .upToNextMinor(from: "1.7.0")),
-        .package(url: "https://github.com/xtool-org/zsign", .upToNextMinor(from: "1.9.0")),
+        .package(path: "Vendor/zsign"),
+        .package(path: "Vendor/PathKit"),
+        .package(path: "Vendor/combine-schedulers"),
 
         .package(url: "https://github.com/apple/swift-system", from: "1.4.0"),
         .package(url: "https://github.com/apple/swift-http-types", from: "1.3.1"),
@@ -81,10 +85,10 @@ let package = Package(
 
         .package(url: "https://github.com/attaswift/BigInt", from: "6.0.0"),
         .package(url: "https://github.com/jpsim/Yams", from: "6.0.0"),
-        .package(url: "https://github.com/saagarjha/unxip", from: "3.2.0"),
+        .package(path: "Vendor/unxip"),
 
         // NB: this should only be imported from XcodeProjects
-        .package(url: "https://github.com/tuist/XcodeProj.git", from: "9.17.5"),
+        .package(path: "Vendor/XcodeProj"),
     ],
     targets: [
         .target(
@@ -118,7 +122,7 @@ let package = Package(
                 .product(
                     name: "Subprocess",
                     package: "swift-subprocess",
-                    condition: .when(platforms: [.linux, .macOS])
+                    condition: .when(platforms: [.linux, .macOS, .windows])
                 ),
             ],
             swiftSettings: swiftSettings,

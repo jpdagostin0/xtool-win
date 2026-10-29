@@ -4,6 +4,9 @@ import XKit
 import ArgumentParser
 import XUtils
 import Dependencies
+#if os(Windows)
+import WinSDK
+#endif
 
 public enum XTool {
     public static func run(arguments: [String]? = nil) async throws {
@@ -78,13 +81,29 @@ extension ParsableCommand where Self: SendableMetatype {
             }
         }
 
+        #if os(Windows)
+        ConsoleInterrupt.onInterrupt = { task.cancel() }
+        SetConsoleCtrlHandler({ ctrlType in
+            guard ctrlType == CTRL_C_EVENT || ctrlType == CTRL_BREAK_EVENT else { return false }
+            ConsoleInterrupt.onInterrupt?()
+            return true
+        }, true)
+        #else
         signal(SIGINT, SIG_IGN)
         let source = DispatchSource.makeSignalSource(signal: SIGINT)
         source.setEventHandler { task.cancel() }
         source.resume()
+        #endif
 
         cont.finish()
 
         await task.value
     }
 }
+
+#if os(Windows)
+// SetConsoleCtrlHandler takes a C function pointer, which can't capture context
+private enum ConsoleInterrupt {
+    nonisolated(unsafe) static var onInterrupt: (@Sendable () -> Void)?
+}
+#endif

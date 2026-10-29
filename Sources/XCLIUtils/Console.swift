@@ -1,6 +1,9 @@
 import Foundation
 import XUtils
 import Dependencies
+#if os(Windows)
+import WinSDK
+#endif
 
 package enum Console {
     package static func prompt(_ message: String) async throws -> String {
@@ -33,18 +36,17 @@ package enum Console {
 
     private static func withoutEcho<T>(_ action: () async throws -> T) async rethrows -> T {
         #if os(Windows)
-        // based on https://stackoverflow.com/a/4497117/3769927
-        // TODO: Confirm that this works (or even compiles)
-
-        let hConsole = CreateFileA("CONIN$", GENERIC_WRITE | GENERIC_READ, FILE_SHARE_READ, 0, OPEN_EXISTING, 0, 0)
+        let hConsole = GetStdHandle(STD_INPUT_HANDLE)
         var dwOldMode: DWORD = 0
-        GetConsoleMode(hConsole, &dwOldMode)
+        guard GetConsoleMode(hConsole, &dwOldMode) else {
+            // not a console (e.g. redirected stdin); nothing to hide
+            return try await action()
+        }
 
-        let dwNewMode = dwOldMode & ~ENABLE_ECHO_INPUT
-        SetConsoleMode(hConsole, dwNewMode)
+        SetConsoleMode(hConsole, dwOldMode & ~DWORD(ENABLE_ECHO_INPUT))
         defer { SetConsoleMode(hConsole, dwOldMode) }
 
-        return try action()
+        return try await action()
         #else
         var origAttr = termios()
         tcgetattr(STDIN_FILENO, &origAttr)

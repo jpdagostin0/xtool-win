@@ -1,0 +1,20 @@
+import Foundation
+
+{% for type in types.implementing.AutoEquatable|class|!annotated:"skipEquality" %}
+extension {{ type.name }} {
+    /// :nodoc:
+    func isEqual(to rhs: {{ type.name }}) -> Bool {
+        {% for variable in type.storedVariables %}
+        {% if variable.typeName.dictionary %}
+        if !NSDictionary(dictionary: {{ variable.name}}{% if variable.typeName.isOptional %} ?? [:]{% endif %}).isEqual(NSDictionary(dictionary: rhs.{{ variable.name }}{% if variable.typeName.isOptional %} ?? [:]{% endif %})) { return false }
+        {% elif variable|!annotated:"skipEquality" %}
+        if {{ variable.name }} != rhs.{{ variable.name }} { return false }
+        {% endif %}
+        {% endfor %}
+        {% for variable in type.computedVariables|annotated:"forceEquality" %}if self.{{ variable.name }} != rhs.{{ variable.name }} { return false }
+        {% endfor %}
+        {% if type.inheritedTypes.first == "NSObject" %}return true{% else %}return super.isEqual(to: rhs){% endif %}
+    }
+}
+
+{% endfor %}

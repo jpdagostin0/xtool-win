@@ -725,7 +725,7 @@ struct SDKBuilder {
     // returns the number of files we actually want to keep,
     // useful for computing progress % during fs traversal
     private func _extractXIP(inputPath: String, outDir: String) async throws -> Int {
-        let fd = try FileDescriptor.open(inputPath, .readOnly)
+        let fd = try FileDescriptor.open(FilePath(inputPath), .readOnly)
         defer { try? fd.close() }
 
         let length = try fd.seek(offset: 0, from: .end)

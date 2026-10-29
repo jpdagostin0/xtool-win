@@ -1,0 +1,15 @@
+{
+  "name": "xtool-windows-deps",
+  "version-string": "0",
+  "description": "Native libraries needed to build xtool on Windows",
+  "supports": "windows",
+  "dependencies": [
+    "libimobiledevice",
+    "libimobiledevice-glue",
+    "liblzma",
+    "libplist",
+    "libusbmuxd",
+    "openssl",
+    "zlib"
+  ]
+}

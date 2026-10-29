@@ -2,6 +2,10 @@
 
 Cross-platform Xcode replacement. Build and deploy iOS apps with SwiftPM on Linux, Windows, and macOS.
 
+> [!NOTE]
+> **xtool-win**: this fork builds xtool with the native Windows Swift toolchain, without WSL.
+> See [Documentation/Windows.md](Documentation/Windows.md).
+
 ## Overview
 
 xtool is a cross-platform (Linux/WSL/macOS) tool that replicates Xcode functionality with open standards.

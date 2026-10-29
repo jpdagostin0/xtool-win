@@ -19,14 +19,18 @@ extension TerminationStatus {
         if isSuccess { return nil }
         switch self {
         case .exited(let code): return .exited(code)
+        #if !os(Windows)
         case .signaled(let code): return .signaled(code)
+        #endif
         }
     }
 }
 
 public enum SubprocessFailure: Error {
     case exited(TerminationStatus.Code)
+    #if !os(Windows)
     case signaled(TerminationStatus.Code)
+    #endif
 }
 
 extension PlatformOptions {

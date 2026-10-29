@@ -28,9 +28,15 @@ final class DispatchInput: Sendable {
             case failed(Int32)
         }
         let initState = LockIsolated<InitState>(.pending)
+        #if os(Windows)
+        // dispatch_fd_t is a HANDLE on Windows
+        let dispatchFD = _get_osfhandle(fileDesciptor.rawValue)
+        #else
+        let dispatchFD = fileDesciptor.rawValue
+        #endif
         self.channel = DispatchIO(
             type: .stream,
-            fileDescriptor: fileDesciptor.rawValue,
+            fileDescriptor: dispatchFD,
             queue: queue,
         ) { err in
             initState.withValue { state in

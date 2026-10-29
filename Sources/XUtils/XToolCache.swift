@@ -15,6 +15,10 @@ package enum XToolCache {
             xdgCache = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent(".cache")
         }
         return xdgCache.appending(component: "xtool")
+        #elseif os(Windows)
+        let localAppData = env["LOCALAPPDATA"].map { URL(fileURLWithPath: $0, isDirectory: true) }
+            ?? FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("AppData/Local")
+        return localAppData.appendingPathComponent("sh.xtool")
         #else
         return URL.cachesDirectory.appending(component: "sh.xtool")
         #endif
